@@ -1,0 +1,33 @@
+abstract class Car {
+    int maxSpeed;
+    abstract void accelerate();
+    abstract void brake();
+}
+
+abstract class BMW extends Car {
+    // Other methods and attributes for BMW
+}
+
+class BMW2 extends BMW {
+    void accelerate() {
+        System.out.println("BMW2 is accelerating");
+    }
+    
+    void brake() {
+        System.out.println("BMW2 is applying Brake");
+    }
+}
+
+abstract class A {
+    int x = 10;
+    void fun() {
+        System.out.println("Hello, I'm A");
+    }
+}
+public class AbstractStudy {
+    public static void main(String[] args) {
+        Car c = new BMW2(); // Using BMW2, a subclass of Car
+        c.accelerate();
+        c.brake();
+    }
+}
